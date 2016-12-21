@@ -1,0 +1,34 @@
+{
+    "name": "datatables.net-buttons-se",
+    "version": "1.2.4",
+    "description": "Buttons for DataTables with styling for [Semantic UI](http://semantic-ui.com/)",
+    "files": [
+        "js/buttons.semanticui.js",
+        "css/buttons.semanticui.css"
+    ],
+    "main": "./js/buttons.semanticui.js",
+    "keywords": [
+        "buttons",
+        "excel",
+        "pdf",
+        "csv",
+        "column visibility",
+        "print",
+        "DataTables",
+        "jQuery",
+        "table",
+        "Semantic UI"
+    ],
+    "homepage": "https://datatables.net",
+    "bugs": "https://datatables.net/forums",
+    "license": "MIT",
+    "author": {
+        "name": "SpryMedia Ltd",
+        "url": "http://datatables.net"
+    },
+    "dependencies": {
+        "jquery": ">=1.7",
+        "datatables.net-se": ">=1.10.13",
+        "datatables.net-buttons": ">=1.2.4"
+    }
+}
