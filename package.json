@@ -1,6 +1,6 @@
 {
     "name": "datatables.net-buttons-se",
-    "version": "1.2.4",
+    "version": "2.2.0",
     "description": "Buttons for DataTables with styling for [Semantic UI](http://semantic-ui.com/)",
     "files": [
         "js/buttons.semanticui.js",
