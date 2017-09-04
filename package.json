@@ -3,8 +3,8 @@
     "version": "1.4.1",
     "description": "Buttons for DataTables with styling for [Semantic UI](http://semantic-ui.com/)",
     "files": [
-        "js/buttons.semanticui.js",
-        "css/buttons.semanticui.css"
+        "css/**/*.css",
+        "js/**/*.js"
     ],
     "main": "./js/buttons.semanticui.js",
     "keywords": [
