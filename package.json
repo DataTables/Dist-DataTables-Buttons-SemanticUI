@@ -1,35 +1,53 @@
 {
     "name": "datatables.net-buttons-se",
+    "description": "Buttons for DataTables with styling for [SemanticUI](https://semantic-ui.com/)",
+    "main": "js/buttons.semanticui.js",
+    "style": "css/buttons.semanticui.css",
     "version": "1.7.0",
-    "description": "Buttons for DataTables with styling for [Semantic UI](http://semantic-ui.com/)",
     "files": [
         "css/**/*.css",
         "js/**/*.js"
     ],
-    "main": "js/buttons.semanticui.js",
     "keywords": [
-        "buttons",
-        "excel",
-        "pdf",
-        "csv",
-        "column visibility",
-        "print",
-        "DataTables",
+        "Buttons",
+ "Column Visibility",
+ "csv",
+ "excel",
+ "pdf",
+ "print",
+        "Semantic",
+ "SemanticUI",
+ "Semantic UI",
+        "Datatables",
         "jQuery",
         "table",
-        "Semantic UI"
+        "filter",
+        "sort"
     ],
-    "homepage": "https://datatables.net",
-    "bugs": "https://datatables.net/forums",
-    "license": "MIT",
+    "dependencies": {
+        "datatables.net-buttons": ">=1.7.0",
+        "datatables.net-se": ">=1.10.24",
+        "jquery": ">=1.7"
+    },
+    "moduleType": [
+        "globals",
+        "amd",
+        "node"
+    ],
+    "ignore": [
+        "composer.json",
+        "datatables.json",
+        "package.json"
+    ],
     "author": {
         "name": "SpryMedia Ltd",
         "url": "http://datatables.net"
     },
-    "dependencies": {
-        "jquery": ">=1.7",
-        "datatables.net-se": "^1.10.15",
-        "datatables.net-buttons": "1.7.0"
-    },
-    "style": "css/buttons.semanticui.css"
+    "homepage": "https://datatables.net",
+    "bugs": "https://datatables.net/forums",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DataTables/Dist-DataTables-Buttons-SemanticUI.git"
+    }
 }
