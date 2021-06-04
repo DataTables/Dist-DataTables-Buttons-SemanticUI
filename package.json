@@ -4,21 +4,21 @@
     "main": "js/buttons.semanticui.js",
     "style": "css/buttons.semanticui.css",
     "types": "./types/buttons.semanticUI.d.ts",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "files": [
         "css/**/*.css",
         "js/**/*.js"
     ],
     "keywords": [
         "Buttons",
- "Column Visibility",
- "csv",
- "excel",
- "pdf",
- "print",
+        "Column Visibility",
+        "csv",
+        "excel",
+        "pdf",
+        "print",
         "Semantic",
- "SemanticUI",
- "Semantic UI",
+        "SemanticUI",
+        "Semantic UI",
         "Datatables",
         "jQuery",
         "table",
@@ -26,9 +26,9 @@
         "sort"
     ],
     "dependencies": {
-        "datatables.net-buttons": ">=1.7.0",
-        "datatables.net-se": ">=1.10.24",
-        "jquery": ">=1.7"
+        "jquery": ">=1.7",
+        "datatables.net-se": "^1.10.15",
+        "datatables.net-buttons": "1.7.1"
     },
     "moduleType": [
         "globals",
