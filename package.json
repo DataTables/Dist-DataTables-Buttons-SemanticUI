@@ -11,14 +11,14 @@
     ],
     "keywords": [
         "Buttons",
-        "Column Visibility",
-        "csv",
-        "excel",
-        "pdf",
-        "print",
+ "Column Visibility",
+ "csv",
+ "excel",
+ "pdf",
+ "print",
         "Semantic",
-        "SemanticUI",
-        "Semantic UI",
+ "SemanticUI",
+ "Semantic UI",
         "Datatables",
         "jQuery",
         "table",
@@ -26,9 +26,9 @@
         "sort"
     ],
     "dependencies": {
-        "jquery": ">=1.7",
-        "datatables.net-se": "^1.10.15",
-        "datatables.net-buttons": "1.7.1"
+        "datatables.net-buttons": ">=1.7.1",
+        "datatables.net-se": ">=1.10.26-dev",
+        "jquery": ">=1.7"
     },
     "moduleType": [
         "globals",
