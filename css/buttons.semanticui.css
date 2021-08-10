@@ -52,6 +52,10 @@ div.dt-button-info > div {
   padding: 1em;
 }
 
+button.dtb-hide-drop {
+  display: none !important;
+}
+
 div.dt-button-collection-title {
   text-align: center;
   padding: 0.3em 0 0.5em;
@@ -189,4 +193,8 @@ div.dt-buttons a.button.processing:after {
   -ms-animation: dtb-spinner 1500ms infinite linear;
   -webkit-animation: dtb-spinner 1500ms infinite linear;
   -moz-animation: dtb-spinner 1500ms infinite linear;
+}
+
+span.dt-down-arrow {
+  display: none;
 }
