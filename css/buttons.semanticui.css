@@ -139,6 +139,22 @@ div.dt-button-collection.four-column > :last-child {
 div.dt-button-collection .dt-button {
   border-radius: 0;
 }
+div.dt-button-collection div.dt-btn-split-wrapper {
+  display: flex;
+}
+div.dt-button-collection div.dt-btn-split-wrapper button {
+  flex-grow: 1 !important;
+  flex-basis: auto !important;
+  width: auto !important;
+  border-top-right-radius: 0px !important;
+}
+div.dt-button-collection div.dt-btn-split-wrapper button.dt-btn-split-drop {
+  flex-grow: 0 !important;
+  flex-basis: auto !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 4px !important;
+}
 
 button.buttons-collection.ui.button span:after {
   display: inline-block;
