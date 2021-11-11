@@ -242,6 +242,16 @@ div.dt-buttons a.button.processing:after {
   -webkit-animation: dtb-spinner 1500ms infinite linear;
   -moz-animation: dtb-spinner 1500ms infinite linear;
 }
+div.dt-buttons.ui.buttons {
+  flex-wrap: wrap;
+}
+div.dt-buttons.ui.basic.buttons .ui.button {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  margin-bottom: -1px;
+}
+div.dt-buttons.ui.basic.buttons .ui.button:hover {
+  background: transparent !important;
+}
 
 span.dt-down-arrow {
   display: none;
