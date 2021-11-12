@@ -278,3 +278,14 @@ div.dt-button-collection span.dt-button-spacer.bar {
 .ui.basic.buttons .button.dt-button-spacer {
   background-color: rgba(34, 36, 38, 0.05) !important;
 }
+
+div.dt-btn-split-wrapper:active:not(.disabled) button.button, div.dt-btn-split-wrapper.active:not(.disabled) button.button {
+  background-color: #f8f8f8 !important;
+}
+div.dt-btn-split-wrapper:active:not(.disabled) button.dt-btn-split-drop, div.dt-btn-split-wrapper.active:not(.disabled) button.dt-btn-split-drop {
+  box-shadow: none;
+  background-color: transparent !important;
+}
+div.dt-btn-split-wrapper:active:not(.disabled) button.button:hover, div.dt-btn-split-wrapper.active:not(.disabled) button.button:hover {
+  background-color: transparent !important;
+}
