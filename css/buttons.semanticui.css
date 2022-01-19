@@ -243,6 +243,21 @@ div.dt-button-collection.columns.dtb-b1 .dt-button {
     width: 200px;
   }
 }
+div.dt-button-collection div.dt-button-collection-title {
+  font-size: 1rem;
+}
+div.dt-button-collection.fixed {
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  font-size: 1em;
+  padding: 0.5rem;
+}
+div.dt-button-collection.fixed .ui.vertical.buttons {
+  flex-direction: row;
+  border: none;
+}
+div.dt-button-collection.fixed button.dt-button {
+  border: 1px solid rgba(34, 36, 38, 0.15) !important;
+}
 div.dt-button-collection div.dt-btn-split-wrapper {
   display: flex;
 }
