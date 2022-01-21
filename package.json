@@ -4,7 +4,7 @@
     "main": "js/buttons.semanticui.js",
     "style": "css/buttons.semanticui.css",
     "types": "./types/buttons.semanticUI.d.ts",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
