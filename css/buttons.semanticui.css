@@ -376,7 +376,12 @@ div.dt-button-collection span.dt-button-spacer.bar {
   padding-left: 1.5em;
 }
 
-.ui.basic.buttons .button.dt-button-spacer {
+div.dt-buttons.ui.basic.buttons .button.dt-button-spacer {
+  background: rgba(34, 36, 38, 0.05) !important;
+  box-shadow: none;
+  cursor: initial;
+}
+div.dt-buttons.ui.basic.buttons .button.dt-button-spacer:hover {
   background-color: rgba(34, 36, 38, 0.05) !important;
 }
 
