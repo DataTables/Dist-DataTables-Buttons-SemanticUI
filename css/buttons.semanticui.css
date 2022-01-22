@@ -261,6 +261,14 @@ div.dt-button-collection.columns.dtb-b1 .dt-button {
 div.dt-button-collection div.dt-button-collection-title {
   font-size: 1rem;
 }
+div.dt-button-collection.columns div.ui.basic.buttons span.dt-button-spacer {
+  background: transparent !important;
+  border: none;
+  flex: 1 1 100%;
+}
+div.dt-button-collection.columns div.ui.basic.buttons span.dt-button-spacer:hover {
+  background: transparent !important;
+}
 div.dt-button-collection:not(.columns) .ui.vertical.buttons {
   width: 100%;
   border: none;
