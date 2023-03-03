@@ -7,7 +7,6 @@ import DataTable from 'datatables.net-se';
 import Buttons from 'datatables.net-buttons';
 
 
-
 $.extend( true, DataTable.Buttons.defaults, {
 	dom: {
 		container: {
