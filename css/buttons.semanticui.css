@@ -281,30 +281,22 @@ div.dt-button-collection.columns .ui.vertical.buttons {
   flex-direction: row;
   border: none;
 }
-div.dt-button-collection button.dt-button {
-  border: 1px solid rgba(34, 36, 38, 0.15) !important;
-}
-div.dt-button-collection div.dt-btn-split-wrapper {
+div.dt-button-collection div.dt-button-split {
   display: flex;
 }
-div.dt-button-collection div.dt-btn-split-wrapper button {
+div.dt-button-collection div.dt-button-split button:first-child {
   flex-grow: 1 !important;
   flex-basis: auto !important;
   width: auto !important;
   border-top-right-radius: 0px !important;
+  border-left: none !important;
 }
-div.dt-button-collection div.dt-btn-split-wrapper button.dt-btn-split-drop {
-  flex-grow: 0 !important;
-  flex-basis: auto !important;
+div.dt-button-collection div.dt-button-split button:last-child {
+  flex: 0 1 0 !important;
   border-bottom-left-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
   border-top-right-radius: 4px !important;
-}
-
-button.buttons-collection.ui.button span:after {
-  display: inline-block;
-  content: "▾";
-  padding-left: 0.5em;
+  min-width: 32px;
 }
 
 div.dt-button-background {
@@ -357,13 +349,22 @@ div.dt-buttons a.button.processing:after {
 }
 div.dt-buttons.ui.buttons {
   flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 0.28571429rem !important;
 }
-div.dt-buttons.ui.basic.buttons .ui.button {
-  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
-  margin-bottom: -1px;
+div.dt-buttons.ui.buttons .ui.button {
+  border-radius: 0 !important;
 }
-div.dt-buttons.ui.basic.buttons .ui.button:hover {
-  background: transparent !important;
+div.dt-buttons .button span.dt-button-down-arrow {
+  position: relative;
+  top: -2px;
+  font-size: 10px;
+  padding-left: 10px;
+  line-height: 1em;
+  opacity: 0.6;
+}
+div.dt-buttons .dt-button-split-drop span.dt-button-down-arrow {
+  padding-left: 0;
 }
 
 span.dt-down-arrow {
@@ -397,13 +398,20 @@ div.dt-buttons.ui.basic.buttons .button.dt-button-spacer:hover {
   background-color: rgba(34, 36, 38, 0.05) !important;
 }
 
-div.dt-btn-split-wrapper:active:not(.disabled) button.button, div.dt-btn-split-wrapper.active:not(.disabled) button.button {
+div.dt-button-split {
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+}
+div.dt-button-split button:first-child,
+div.dt-button-split button:last-child {
+  border-radius: 0px !important;
+}
+div.dt-button-split:active:not(.disabled) button.button, div.dt-button-split.active:not(.disabled) button.button {
   background-color: #f8f8f8 !important;
 }
-div.dt-btn-split-wrapper:active:not(.disabled) button.dt-btn-split-drop, div.dt-btn-split-wrapper.active:not(.disabled) button.dt-btn-split-drop {
+div.dt-button-split:active:not(.disabled) button.dt-button-split-drop, div.dt-button-split.active:not(.disabled) button.dt-button-split-drop {
   box-shadow: none;
   background-color: transparent !important;
 }
-div.dt-btn-split-wrapper:active:not(.disabled) button.button:hover, div.dt-btn-split-wrapper.active:not(.disabled) button.button:hover {
+div.dt-button-split:active:not(.disabled) button.button:hover, div.dt-button-split.active:not(.disabled) button.button:hover {
   background-color: transparent !important;
 }
