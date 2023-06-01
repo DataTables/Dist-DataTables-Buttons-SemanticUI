@@ -1,5 +1,5 @@
 /*! Bootstrap integration for DataTables' Buttons
- * ©2016 SpryMedia Ltd - datatables.net/license
+ * © SpryMedia Ltd - datatables.net/license
  */
 
 import jQuery from 'jquery';
@@ -10,7 +10,7 @@ import Buttons from 'datatables.net-buttons';
 let $ = jQuery;
 
 
-$.extend( true, DataTable.Buttons.defaults, {
+$.extend(true, DataTable.Buttons.defaults, {
 	dom: {
 		container: {
 			className: 'dt-buttons ui buttons'
@@ -30,7 +30,7 @@ $.extend( true, DataTable.Buttons.defaults, {
 				className: 'ui dropdown active visible dt-button-collection',
 				content: {
 					className: 'menu transition visible'
-				},
+				}
 			},
 			closeButton: false,
 			button: {
@@ -73,17 +73,17 @@ $.extend( true, DataTable.Buttons.defaults, {
 			}
 		}
 	}
-} );
+});
 
 $(document).on('buttons-popover.dt', function () {
 	var notButton = false;
-	$('.dtsp-panesContainer').each(function() {
-		if(!$(this).is('button')){
+	$('.dtsp-panesContainer').each(function () {
+		if (!$(this).is('button')) {
 			notButton = true;
 		}
 	});
-	if(notButton){
-		$('.dtsp-panesContainer').removeClass('vertical buttons')
+	if (notButton) {
+		$('.dtsp-panesContainer').removeClass('vertical buttons');
 	}
 });
 
