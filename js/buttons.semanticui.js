@@ -60,6 +60,7 @@ $.extend( true, DataTable.Buttons.defaults, {
 		},
 		button: {
 			tag: 'button',
+			active: 'active',
 			className: 'dt-button ui button',
 			spacerClass: 'dt-button ui button'
 		},
@@ -78,6 +79,7 @@ $.extend( true, DataTable.Buttons.defaults, {
 			button: {
 				tag: 'div',
 				className: 'item',
+				active: 'dt-button-active',
 				spacer: {
 					className: 'divider',
 					tag: 'div'
