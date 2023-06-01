@@ -133,6 +133,10 @@ div.dt-button-collection {
   z-index: 2002;
   background: white;
 }
+div.dt-button-collection > div.menu {
+  right: auto !important;
+  min-width: 150px !important;
+}
 div.dt-button-collection.fixed {
   position: fixed;
   display: block;
