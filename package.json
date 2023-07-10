@@ -5,7 +5,7 @@
     "module": "js/buttons.semanticui.mjs",
     "style": "css/buttons.semanticui.css",
     "types": "./types/buttons.semanticui.d.ts",
-    "version": "2.4.0",
+    "version": "2.4.1",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
