@@ -37,6 +37,7 @@ div.dt-buttons {
 div.dt-buttons .dt-button {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 div.dt-button-info {
@@ -80,10 +81,13 @@ button.dtb-hide-drop {
 
 div.dt-button-collection-title {
   text-align: center;
-  padding: 0.3em 0 0.5em;
+  padding: 0.3em 0.5em 0.5em;
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 div.dt-button-collection-title:empty {
@@ -167,164 +171,52 @@ html.dark div.dt-button-info {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-div.dt-button-collection {
-  position: absolute !important;
-  min-width: 200px;
+div.dt-button-collection.ui.dropdown {
+  position: absolute;
+  width: 200px;
   margin-top: 3px !important;
   z-index: 2002;
-  background: white;
-}
-div.dt-button-collection > div.menu {
-  right: auto !important;
-  min-width: 150px !important;
-}
-div.dt-button-collection.fixed {
-  position: fixed;
-  display: block;
-  top: 50%;
-  left: 50%;
-  margin-left: -75px;
-  border-radius: 5px;
+  transition: none;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 0.28571429rem;
   background-color: white;
-  padding: 0.5em;
 }
-div.dt-button-collection.fixed.two-column {
-  margin-left: -200px;
-}
-div.dt-button-collection.fixed.three-column {
-  margin-left: -225px;
-}
-div.dt-button-collection.fixed.four-column {
-  margin-left: -300px;
-}
-div.dt-button-collection.fixed.columns {
-  margin-left: -409px;
-}
-@media screen and (max-width: 1024px) {
-  div.dt-button-collection.fixed.columns {
-    margin-left: -308px;
-  }
-}
-@media screen and (max-width: 640px) {
-  div.dt-button-collection.fixed.columns {
-    margin-left: -203px;
-  }
-}
-@media screen and (max-width: 460px) {
-  div.dt-button-collection.fixed.columns {
-    margin-left: -100px;
-  }
-}
-div.dt-button-collection.fixed > :last-child {
-  max-height: 100vh;
-  overflow: auto;
-}
-div.dt-button-collection.two-column > :last-child, div.dt-button-collection.three-column > :last-child, div.dt-button-collection.four-column > :last-child {
-  display: block !important;
-  -webkit-column-gap: 8px;
-  -moz-column-gap: 8px;
-  -ms-column-gap: 8px;
-  -o-column-gap: 8px;
-  column-gap: 8px;
-}
-div.dt-button-collection.two-column > :last-child > *, div.dt-button-collection.three-column > :last-child > *, div.dt-button-collection.four-column > :last-child > * {
-  -webkit-column-break-inside: avoid;
-  break-inside: avoid;
-}
-div.dt-button-collection.two-column {
-  width: 400px;
-}
-div.dt-button-collection.two-column > :last-child {
-  padding-bottom: 1px;
-  column-count: 2;
-}
-div.dt-button-collection.three-column {
-  width: 450px;
-}
-div.dt-button-collection.three-column > :last-child {
-  padding-bottom: 1px;
-  column-count: 3;
-}
-div.dt-button-collection.four-column {
-  width: 600px;
-}
-div.dt-button-collection.four-column > :last-child {
-  padding-bottom: 1px;
-  column-count: 4;
-}
-div.dt-button-collection .dt-button {
+div.dt-button-collection.ui.dropdown div.menu {
+  position: relative;
+  display: block;
+  right: auto !important;
+  min-width: 200px !important;
+  box-shadow: none;
+  border: none;
   border-radius: 0;
+  transition: none;
+  background: transparent;
 }
-div.dt-button-collection.columns {
-  width: auto;
-}
-div.dt-button-collection.columns > :last-child {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 6px;
-  width: 818px;
-  padding-bottom: 1px;
-}
-div.dt-button-collection.columns > :last-child .dt-button {
-  min-width: 200px;
-  flex: 0 1;
-  margin: 0;
-}
-div.dt-button-collection.columns.dtb-b3 > :last-child, div.dt-button-collection.columns.dtb-b2 > :last-child, div.dt-button-collection.columns.dtb-b1 > :last-child {
-  justify-content: space-between;
-}
-div.dt-button-collection.columns.dtb-b3 .dt-button {
-  flex: 1 1 32%;
-}
-div.dt-button-collection.columns.dtb-b2 .dt-button {
-  flex: 1 1 48%;
-}
-div.dt-button-collection.columns.dtb-b1 .dt-button {
-  flex: 1 1 100%;
-}
-@media screen and (max-width: 1024px) {
-  div.dt-button-collection.columns > :last-child {
-    width: 612px;
-  }
-}
-@media screen and (max-width: 640px) {
-  div.dt-button-collection.columns > :last-child {
-    width: 406px;
-  }
-  div.dt-button-collection.columns.dtb-b3 .dt-button {
-    flex: 0 1 32%;
-  }
-}
-@media screen and (max-width: 460px) {
-  div.dt-button-collection.columns > :last-child {
-    width: 200px;
-  }
-}
-div.dt-button-collection div.dt-button-collection-title {
+div.dt-button-collection.ui.dropdown div.dt-button-collection-title {
   font-size: 1rem;
+  padding: 1em 0.75em 0.5em;
 }
-div.dt-button-collection.columns div.ui.basic.buttons span.dt-button-spacer {
+div.dt-button-collection.ui.dropdown.columns div.ui.basic.buttons span.dt-button-spacer {
   background: transparent !important;
   border: none;
   flex: 1 1 100%;
 }
-div.dt-button-collection.columns div.ui.basic.buttons span.dt-button-spacer:hover {
+div.dt-button-collection.ui.dropdown.columns div.ui.basic.buttons span.dt-button-spacer:hover {
   background: transparent !important;
 }
-div.dt-button-collection:not(.columns) .ui.vertical.buttons {
+div.dt-button-collection.ui.dropdown:not(.columns) .ui.vertical.buttons {
   width: 100%;
   border: none;
 }
-div.dt-button-collection.columns .ui.vertical.buttons {
+div.dt-button-collection.ui.dropdown.columns .ui.vertical.buttons {
   flex-direction: row;
   border: none;
 }
-div.dt-button-collection div.dt-button-split {
+div.dt-button-collection.ui.dropdown div.dt-button-split {
   display: flex;
 }
-div.dt-button-collection div.dt-button-split div:first-child {
+div.dt-button-collection.ui.dropdown div.dt-button-split div:first-child {
   flex-grow: 1 !important;
   flex-basis: auto !important;
   width: auto !important;
@@ -341,21 +233,145 @@ div.dt-button-collection div.dt-button-split div:first-child {
   color: rgba(0, 0, 0, 0.87);
   padding: 0.78571429rem 1.14285714rem;
 }
-div.dt-button-collection div.dt-button-split div:first-child:hover {
+div.dt-button-collection.ui.dropdown div.dt-button-split div:first-child:hover {
   background: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.95);
   z-index: 13;
 }
-div.dt-button-collection div.dt-button-split button:last-child {
+div.dt-button-collection.ui.dropdown div.dt-button-split button:last-child {
   flex: 0 1 0 !important;
   min-width: 32px;
   border: none;
   background: transparent;
 }
-div.dt-button-collection div.dt-button-split button:last-child:hover {
+div.dt-button-collection.ui.dropdown div.dt-button-split button:last-child:hover {
   background: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.95);
   z-index: 13;
+}
+div.dt-button-collection.ui.dropdown.fixed {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin-left: -75px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 0.5em;
+}
+div.dt-button-collection.ui.dropdown.fixed.two-column {
+  margin-left: -200px;
+}
+div.dt-button-collection.ui.dropdown.fixed.three-column {
+  margin-left: -225px;
+}
+div.dt-button-collection.ui.dropdown.fixed.four-column {
+  margin-left: -300px;
+}
+div.dt-button-collection.ui.dropdown.fixed.columns {
+  margin-left: -409px;
+}
+@media screen and (max-width: 1024px) {
+  div.dt-button-collection.ui.dropdown.fixed.columns {
+    margin-left: -308px;
+  }
+}
+@media screen and (max-width: 640px) {
+  div.dt-button-collection.ui.dropdown.fixed.columns {
+    margin-left: -203px;
+  }
+}
+@media screen and (max-width: 460px) {
+  div.dt-button-collection.ui.dropdown.fixed.columns {
+    margin-left: -100px;
+  }
+}
+div.dt-button-collection.ui.dropdown.fixed > :last-child {
+  max-height: 100vh;
+  overflow: auto;
+}
+div.dt-button-collection.ui.dropdown.two-column > :last-child, div.dt-button-collection.ui.dropdown.three-column > :last-child, div.dt-button-collection.ui.dropdown.four-column > :last-child {
+  display: block !important;
+  -webkit-column-gap: 8px;
+  -moz-column-gap: 8px;
+  -ms-column-gap: 8px;
+  -o-column-gap: 8px;
+  column-gap: 8px;
+}
+div.dt-button-collection.ui.dropdown.two-column > :last-child > *, div.dt-button-collection.ui.dropdown.three-column > :last-child > *, div.dt-button-collection.ui.dropdown.four-column > :last-child > * {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+}
+div.dt-button-collection.ui.dropdown.two-column {
+  width: 400px;
+}
+div.dt-button-collection.ui.dropdown.two-column > :last-child {
+  padding-bottom: 1px;
+  column-count: 2;
+}
+div.dt-button-collection.ui.dropdown.three-column {
+  width: 450px;
+}
+div.dt-button-collection.ui.dropdown.three-column > :last-child {
+  padding-bottom: 1px;
+  column-count: 3;
+}
+div.dt-button-collection.ui.dropdown.four-column {
+  width: 600px;
+}
+div.dt-button-collection.ui.dropdown.four-column > :last-child {
+  padding-bottom: 1px;
+  column-count: 4;
+}
+div.dt-button-collection.ui.dropdown .dt-button {
+  border-radius: 0;
+}
+div.dt-button-collection.ui.dropdown.columns {
+  width: auto;
+}
+div.dt-button-collection.ui.dropdown.columns > :last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  width: 818px;
+  padding-bottom: 1px;
+}
+div.dt-button-collection.ui.dropdown.columns > :last-child .dt-button {
+  min-width: 200px;
+  flex: 0 1;
+  margin: 0;
+}
+div.dt-button-collection.ui.dropdown.columns.dtb-b3 > :last-child, div.dt-button-collection.ui.dropdown.columns.dtb-b2 > :last-child, div.dt-button-collection.ui.dropdown.columns.dtb-b1 > :last-child {
+  justify-content: space-between;
+}
+div.dt-button-collection.ui.dropdown.columns.dtb-b3 .dt-button {
+  flex: 1 1 32%;
+}
+div.dt-button-collection.ui.dropdown.columns.dtb-b2 .dt-button {
+  flex: 1 1 48%;
+}
+div.dt-button-collection.ui.dropdown.columns.dtb-b1 .dt-button {
+  flex: 1 1 100%;
+}
+@media screen and (max-width: 1024px) {
+  div.dt-button-collection.ui.dropdown.columns > :last-child {
+    width: 612px;
+  }
+}
+@media screen and (max-width: 640px) {
+  div.dt-button-collection.ui.dropdown.columns > :last-child {
+    width: 406px;
+  }
+  div.dt-button-collection.ui.dropdown.columns.dtb-b3 .dt-button {
+    flex: 0 1 32%;
+  }
+}
+@media screen and (max-width: 460px) {
+  div.dt-button-collection.ui.dropdown.columns > :last-child {
+    width: 200px;
+  }
 }
 
 div.dt-button-background {
