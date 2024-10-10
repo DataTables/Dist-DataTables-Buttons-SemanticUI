@@ -62,12 +62,11 @@ $.extend(true, DataTable.Buttons.defaults, {
 			tag: 'button',
 			active: 'active',
 			className: 'dt-button ui button',
-			spacerClass: 'dt-button ui button'
+			spacerClass: 'dt-button ui button',
+			dropHtml: '<i class="dropdown icon"></i>',
+			dropClass: ''
 		},
 		collection: {
-			action: {
-				dropHtml: '<i class="dropdown icon"></i>'
-			},
 			container: {
 				tag: 'div',
 				className: 'ui dropdown active visible dt-button-collection',
@@ -92,8 +91,7 @@ $.extend(true, DataTable.Buttons.defaults, {
 				},
 				dropdown: {
 					tag: 'span',
-					className: 'dt-button-split-drop dropdown icon',
-					dropHtml: '<i class="dropdown icon"></i>'
+					className: 'dt-button-split-drop dropdown icon'
 				},
 				wrapper: {
 					tag: 'div',
