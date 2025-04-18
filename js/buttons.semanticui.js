@@ -71,7 +71,7 @@ $.extend(true, DataTable.Buttons.defaults, {
 				tag: 'div',
 				className: 'ui dropdown active visible dt-button-collection',
 				content: {
-					className: 'menu'
+					className: 'resizable scrolling menu'
 				}
 			},
 			closeButton: false,
