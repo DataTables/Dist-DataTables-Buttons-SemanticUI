@@ -216,6 +216,9 @@ div.dt-button-collection.ui.dropdown.columns .ui.vertical.buttons {
   flex-direction: row;
   border: none;
 }
+div.dt-button-collection.ui.dropdown .dt-button:focus {
+  outline-offset: -2px;
+}
 div.dt-button-collection.ui.dropdown div.dt-button-split {
   display: flex;
 }
