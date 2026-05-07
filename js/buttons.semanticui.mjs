@@ -1,16 +1,15 @@
-/*! Bootstrap integration for DataTables' Buttons
- * © SpryMedia Ltd - datatables.net/license
+/*! Buttons Fomantic styling 4.0.0-beta.1 for DataTables
+ * Copyright (c) SpryMedia Ltd - datatables.net/license
  */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net-se';
 import Buttons from 'datatables.net-buttons';
 
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
+var dom = DataTable.Dom;
+var util = DataTable.util;
 
-$.extend(true, DataTable.Buttons.defaults, {
+util.object.assignDeep(DataTable.Buttons.defaults, {
 	dom: {
 		container: {
 			className: 'dt-buttons ui buttons'
@@ -63,7 +62,8 @@ $.extend(true, DataTable.Buttons.defaults, {
 			},
 			dropdown: {
 				tag: 'button',
-				className: 'ui floating button dt-button-split-drop dropdown icon'
+				className:
+					'ui floating button dt-button-split-drop dropdown icon'
 			},
 			wrapper: {
 				tag: 'div',
@@ -73,17 +73,20 @@ $.extend(true, DataTable.Buttons.defaults, {
 	}
 });
 
-$(document).on('buttons-popover.dt', function () {
+dom.s(document).on('buttons-popover.dt', function () {
 	var notButton = false;
-	$('.dtsp-panesContainer').each(function () {
-		if (!$(this).is('button')) {
+
+	dom.s('.dtsp-panesContainer').each(function (el) {
+		if (!dom.s(el).is('button')) {
 			notButton = true;
 		}
 	});
+
 	if (notButton) {
-		$('.dtsp-panesContainer').removeClass('vertical buttons');
+		dom.s('.dtsp-panesContainer').classRemove('vertical buttons');
 	}
 });
 
 
 export default DataTable;
+
