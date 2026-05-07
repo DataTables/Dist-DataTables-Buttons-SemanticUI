@@ -1,8 +1,56 @@
-/*! Bootstrap integration for DataTables' Buttons
- * © SpryMedia Ltd - datatables.net/license
+/*! Buttons Fomantic styling 4.0.0-beta.1 for DataTables
+ * Copyright (c) SpryMedia Ltd - datatables.net/license
  */
 
-$.extend(true, DataTable.Buttons.defaults, {
+(function(factory){
+	if (typeof define === 'function' && define.amd) {
+		// AMD
+		define(['datatables.net-se', 'datatables.net-buttons'], function (dt) {
+			return factory(window, document, dt);
+		});
+	}
+	else if (typeof exports === 'object') {
+		// CommonJS
+		var cjsRequires = function (root) {
+			if (! root.DataTable) {
+				require('datatables.net-se')(root);
+			}
+
+			if (! window.DataTable.Buttons) {
+				require('datatables.net-buttons')(root);
+			}
+		};
+
+		if (typeof window === 'undefined') {
+			module.exports = function (root) {
+				if (! root) {
+					// CommonJS environments without a window global must pass a
+					// root. This will give an error otherwise
+					root = window;
+				}
+
+				cjsRequires(root);
+				return factory(root, root.document, root.DataTable);
+			};
+		}
+		else {
+			cjsRequires(window);
+			module.exports = factory(window, window.document, window.DataTable);
+		}
+	}
+	else {
+		// Browser
+		factory(window, document, window.DataTable);
+	}
+}(function(window, document, DataTable) {
+'use strict';
+
+
+
+var dom = DataTable.Dom;
+var util = DataTable.util;
+
+util.object.assignDeep(DataTable.Buttons.defaults, {
 	dom: {
 		container: {
 			className: 'dt-buttons ui buttons'
@@ -55,7 +103,8 @@ $.extend(true, DataTable.Buttons.defaults, {
 			},
 			dropdown: {
 				tag: 'button',
-				className: 'ui floating button dt-button-split-drop dropdown icon'
+				className:
+					'ui floating button dt-button-split-drop dropdown icon'
 			},
 			wrapper: {
 				tag: 'div',
@@ -65,14 +114,20 @@ $.extend(true, DataTable.Buttons.defaults, {
 	}
 });
 
-$(document).on('buttons-popover.dt', function () {
+dom.s(document).on('buttons-popover.dt', function () {
 	var notButton = false;
-	$('.dtsp-panesContainer').each(function () {
-		if (!$(this).is('button')) {
+
+	dom.s('.dtsp-panesContainer').each(function (el) {
+		if (!dom.s(el).is('button')) {
 			notButton = true;
 		}
 	});
+
 	if (notButton) {
-		$('.dtsp-panesContainer').removeClass('vertical buttons');
+		dom.s('.dtsp-panesContainer').classRemove('vertical buttons');
 	}
 });
+
+
+return DataTable;
+}));
