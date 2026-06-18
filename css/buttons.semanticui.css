@@ -428,6 +428,7 @@ div.dt-buttons a.button.processing:after {
 }
 div.dt-buttons.ui.buttons {
   flex-wrap: wrap;
+  font-size: 1em;
 }
 div.dt-buttons .button span.dt-button-down-arrow {
   position: relative;
