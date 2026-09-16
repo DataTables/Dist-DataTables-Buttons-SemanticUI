@@ -47,7 +47,7 @@
 
 
 
-var dom = DataTable.Dom;
+var Dom = DataTable.Dom;
 var util = DataTable.util;
 
 util.object.assignDeep(DataTable.Buttons.defaults, {
@@ -114,17 +114,17 @@ util.object.assignDeep(DataTable.Buttons.defaults, {
 	}
 });
 
-dom.s(document).on('buttons-popover.dt', function () {
+Dom.on('buttons-popover.dt', function () {
 	var notButton = false;
 
-	dom.s('.dtsp-panesContainer').each(function (el) {
-		if (!dom.s(el).is('button')) {
+	Dom.s('.dtsp-panesContainer').each(function (el) {
+		if (!Dom.s(el).is('button')) {
 			notButton = true;
 		}
 	});
 
 	if (notButton) {
-		dom.s('.dtsp-panesContainer').classRemove('vertical buttons');
+		Dom.s('.dtsp-panesContainer').classRemove('vertical buttons');
 	}
 });
 
