@@ -1,6 +1,6 @@
 {
     "name": "datatables.net/datatables.net-buttons-se",
-    "description": "Buttons for DataTables with styling for [SemanticUI](https://semantic-ui.com/)",
+    "description": "Buttons for DataTables with styling for SemanticUI",
     "support": {
         "forum": "https://datatables.net/forums",
         "source": "https://github.com/DataTables/Dist-DataTables-Buttons-SemanticUI"
