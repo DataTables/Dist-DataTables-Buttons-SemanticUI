@@ -1,4 +1,4 @@
-/*! Buttons Fomantic styling 4.1.0 for DataTables
+/*! Buttons Fomantic styling 4.1.1 for DataTables
  * Copyright (c) SpryMedia Ltd - datatables.net/license
  */
 
