@@ -44,9 +44,10 @@
     "exports": {
         ".": {
             "types": "./types/buttons.semanticui.d.ts",
+            "style": "./css/buttons.semanticui.css",
             "import": "./js/buttons.semanticui.mjs",
-            "default": "./js/buttons.semanticui.mjs",
-            "require": "./js/buttons.semanticui.js"
+            "require": "./js/buttons.semanticui.js",
+            "default": "./js/buttons.semanticui.mjs"
         },
         "./js/*": "./js/*",
         "./css": {
